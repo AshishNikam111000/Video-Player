@@ -1,0 +1,44 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.App {
+    background-image: url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .VideoContainer {
+        position: absolute;
+        bottom: 15%;
+        width: 100%;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        visibility: hidden;
+
+        &::-webkit-scrollbar {
+            scroll-behavior: smooth;
+            height: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: aqua;
+        }
+    }
+
+    .JustForHover {
+        position: relative;
+
+        &:hover {
+            .VideoContainer {
+                visibility: visible;
+            }
+        }
+    }
+}
